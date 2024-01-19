@@ -5,5 +5,15 @@ import { Injectable } from '@angular/core';
 })
 export class TasksService {
 
-  constructor() { }
+  private tasks: object[] = []
+
+  constructor() {}
+
+  getTasks(){
+    return this.tasks;
+  }
+
+  addTask(task: object){
+    this.tasks.push(task);
+  }
 }
