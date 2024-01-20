@@ -1,19 +1,21 @@
+//MODULES
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 //ANG MATERIALS
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 
-
-import { AppRoutingModule } from './app-routing.module';
+//COMPONENTS
 import { AppComponent } from './app.component';
 import { ToDoComponent } from './to-do/to-do.component';
 import { InProgressComponent } from './in-progress/in-progress.component';
 import { DoneComponent } from './done/done.component';
 import { FormComponent } from './form/form.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     MatInputModule,
     MatFormFieldModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

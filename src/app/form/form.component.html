@@ -1,8 +1,8 @@
 <form class="form">
     <mat-form-field class="example-full-width">
         <mat-label>Task: </mat-label>
-        <input class="taskInput" type="text" matInput name="password">
+        <input [(ngModel)]="taskDescr" class="taskInput" matInput name="password">
     </mat-form-field>
 
-    <button class="sendTask" mat-raised-button color="accent">Send Task</button>
+    <button (click)="sendTask()" class="sendTask" mat-raised-button color="accent">Send Task</button>
 </form>
