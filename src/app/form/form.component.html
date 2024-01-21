@@ -4,5 +4,12 @@
         <input [(ngModel)]="taskDescr" class="taskInput" matInput name="password">
     </mat-form-field>
 
+    <mat-form-field>
+        <mat-label>Send To: </mat-label>
+        <mat-select [(ngModel)]="optionValue" name="status">
+            <mat-option *ngFor="let status of statusData" [value]="status">{{status}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
     <button (click)="sendTask()" class="sendTask" mat-raised-button color="accent">Send Task</button>
 </form>

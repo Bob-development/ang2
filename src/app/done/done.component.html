@@ -1,5 +1,9 @@
 <div class="doneWrapper">
-    <h1 class="doneTitle">Done :</h1>
+    <h1 class="doneTitle">{{statusDone}} :</h1>
     
-    <div class="doneList"></div>
+    <div *ngFor="let task of taskService.getTasks()">
+        <div *ngIf="task.status === statusDone" class="todoList">
+            <app-task [toDoTask]="task"></app-task>
+        </div>
+    </div>
 </div>

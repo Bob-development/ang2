@@ -4,10 +4,6 @@
     align-items: center;
 }
 
-mat-form-field{
-    padding: 50px;
-}
-
 .sendTask{
     border-radius: 30px;
     width: 140px;

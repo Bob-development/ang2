@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { MatIconModule } from "@angular/material/icon";
 
 //COMPONENTS
 import { AppComponent } from './app.component';
@@ -16,6 +18,7 @@ import { ToDoComponent } from './to-do/to-do.component';
 import { InProgressComponent } from './in-progress/in-progress.component';
 import { DoneComponent } from './done/done.component';
 import { FormComponent } from './form/form.component';
+import { TaskComponent } from './task/task.component';
 
 @NgModule({
   declarations: [
@@ -23,16 +26,19 @@ import { FormComponent } from './form/form.component';
     ToDoComponent,
     InProgressComponent,
     DoneComponent,
-    FormComponent
+    FormComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
-    FormsModule
+    MatSelectModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

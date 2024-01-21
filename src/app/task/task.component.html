@@ -1,0 +1,16 @@
+<div class="taskWrapper">
+    <div class="task">
+        <h3 class="taskDate">Date: 
+            <input [ngClass]="{'edit' : isEditStyles,  'default' : !isEditStyles}" [disabled]="isInputsDisabled" type="text" [(ngModel)]="toDoTask.date">  
+        </h3>
+
+        <h3 class="taskDescription">Description: 
+            <input [ngClass]="{'edit' : isEditStyles,  'default' : !isEditStyles}" [disabled]="isInputsDisabled" type="text" [(ngModel)]="toDoTask.description">
+        </h3>
+    </div>
+
+    <div class="buttons-wrapper">
+        <button (click)="editTask()" class="editTask" mat-raised-button color="accent">{{editBtnTextContent}}</button>
+        <button (click)="deleteTask()" class="deleteTask" mat-raised-button color="accent">Delete</button>
+    </div>
+</div>

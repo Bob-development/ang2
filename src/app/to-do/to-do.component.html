@@ -1,9 +1,9 @@
 <div class="todoWrapper">
-    <h1 class="todoTitle">To Do:</h1>
+    <h1 class="todoTitle">{{statusToDo}} :</h1>
     
-    <div *ngIf="getTasksLength() > 0" class="todoList">
-        <div *ngFor="let task of taskService.getTasks()">
-            <div class="task">{{task.date}}</div>
+    <div *ngFor="let task of taskService.getTasks()">
+        <div *ngIf="task.status === statusToDo" class="todoList">
+            <app-task [toDoTask]="task"></app-task>
         </div>
     </div>
 </div>

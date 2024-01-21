@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { TasksService } from "../services";
+
+import { Status } from "../../enum/Status";
 
 @Component({
   selector: 'app-in-progress',
@@ -6,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrl: './in-progress.component.css'
 })
 export class InProgressComponent {
+  public statusInProgress = Status.inProgress;
+  
+  constructor(
+    public taskService: TasksService
+  ){}
+
 
 }

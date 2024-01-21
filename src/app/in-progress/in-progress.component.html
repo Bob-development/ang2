@@ -1,5 +1,9 @@
 <div class="inProgressWrapper">
-    <h1 class="inProgressTitle">In Progress:</h1>
+    <h1 class="inProgressTitle">{{statusInProgress}} :</h1>
     
-    <div class="inProgressList"></div>
+    <div *ngFor="let task of taskService.getTasks()">
+        <div *ngIf="task.status === statusInProgress" class="todoList">
+            <app-task [toDoTask]="task"></app-task>
+        </div>
+    </div>
 </div>
