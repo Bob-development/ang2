@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { TasksService } from "../services";
 
+import { Status } from "../../utils/getstatus";
+
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -19,7 +21,8 @@ export class FormComponent {
     const task = {
       date: new Date(),
       description: this.taskDescr,
-      id: this.idCounter
+      id: this.idCounter,
+      status: Status.todo
     }
 
     this.taskService.addTask(task);
