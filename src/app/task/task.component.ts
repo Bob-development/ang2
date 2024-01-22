@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { TasksService } from "../services";
 
+
 @Component({
   selector: 'app-task',
   templateUrl: './task.component.html',
@@ -8,14 +9,14 @@ import { TasksService } from "../services";
 })
 
 export class TaskComponent {
-  @Input() toDoTask: {date: string, description: string, id: number};
+  @Input() toDoTask: {date: string, description: string, id: number, status: string};
 
   public tasks = this.taskService.getTasks();
 
   public isEditStyles: boolean = false;
   public isInputsDisabled: boolean = true;
   public editBtnTextContent: string = 'Click To Edit';
-
+  
   constructor(
     public taskService: TasksService
   ){}
